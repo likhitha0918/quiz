@@ -1,0 +1,21 @@
+{%extends 'base.html'%} {%block title%} Home Page {% endblock %} {% block body%}
+<div
+  class="
+    container-fluid
+    d-flex
+    flex-column
+    justify-content-center
+    align-items-center
+  "
+  style="height: 90vh"
+>
+  {% if user.is_authenticated %}
+  <h1 class="page-title">
+    Welcome To Our Website {{user.user_name.capitalize()}}
+  </h1>
+  {% else %}
+  <h1 class="page-title">Welcome To Our Website</h1>
+  <p class="page-title">Log In To play quiz</p>
+  {% endif %}
+</div>
+{% endblock %}

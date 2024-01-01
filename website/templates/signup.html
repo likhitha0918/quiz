@@ -1,0 +1,55 @@
+{%extends 'base.html'%} {%block title%} Signup Page {% endblock %} {% block
+body%}
+<div class="container-sm">
+  <h1 class="text-center mt-5 page-title">Sign Up</h1>
+  <form method="POST" class="form-container">
+    <div class="mb-3 mb-3-mg">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input
+        required
+        autocomplete="off"
+        type="email"
+        name="email"
+        class="form-control"
+        id="exampleInputEmail1"
+        aria-describedby="emailHelp"
+      />
+    </div>
+    <div class="mb-3 mb-3-mg">
+      <label for="exampleInputUsername" class="form-label">Username</label>
+      <input
+        required
+        autocomplete="off"
+        type="text"
+        name="username"
+        class="form-control"
+        id="exampleInputUsername"
+      />
+    </div>
+    <div class="mb-3 mb-3-mg">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input
+        required
+        type="password"
+        name="password"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+    <div class="mb-3 mb-3-mg">
+      <label for="exampleInputPassword2" class="form-label"
+        >Repeat Password</label
+      >
+      <input
+        required
+        type="password"
+        name="password1"
+        class="form-control"
+        id="exampleInputPassword1"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+  </form>
+</div>
+{% endblock %}

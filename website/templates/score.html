@@ -1,0 +1,21 @@
+{% extends 'base.html' %} {% block title %}Score{% endblock %} {%block body%}
+<div
+  class="container d-flex justify-content-center align-items-center"
+  style="height: 90vh"
+>
+  <div class="container text-center">
+    <h1>Your Score</h1>
+    <h1>{{score}}/10</h1>
+    <form method="POST" action="/profile">
+      <input
+        style="display: none"
+        type="number"
+        name="score"
+        value="{{score}}"
+      />
+      <button type="submit" class="btn btn-primary mt-3">Save Score</button>
+    </form>
+  </div>
+</div>
+
+{%endblock%}

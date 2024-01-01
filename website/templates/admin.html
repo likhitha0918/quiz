@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block title%} Admin {% endblock %} {% block body%}
+
+<h1 class="page-title text-center mt-5">Welcome Administator!</h1>
+<div class="container text-center">
+  <table class="table table-dark mt-5">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Email</th>
+        <th scope="col">Username</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for acc in accounts %}
+      <tr>
+        <th scope="row">{{acc.id}}</th>
+        <td>{{acc.email}}</td>
+        <td>{{acc.user_name}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{%endblock %}

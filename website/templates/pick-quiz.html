@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% block title %}Pick Quiz{% endblock %} {%block
+body%}
+<div
+  class="container d-flex justify-content-center align-items-center flex-column"
+>
+  <form method="POST" class="form-container text-center justify-content-center">
+    <h1>Pick Category</h1>
+    <ul class="pick-quiz">
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="category"
+          id="computers"
+          value="science_computers"
+        />
+        <label class="form-check-label" for="computers">
+          Science Computers
+        </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="category"
+          id="mythology"
+          value="mythology"
+          required
+        />
+        <label class="form-check-label" for="mythology"> Mythology </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="category"
+          id="sports"
+          value="sports"
+        />
+        <label class="form-check-label" for="sports"> Sports </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="category"
+          id="vehicles"
+          value="vehicles"
+        />
+        <label class="form-check-label" for="vehicles"> Vehicles </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="category"
+          id="general_knowledge"
+          value="general_knowledge"
+        />
+        <label class="form-check-label" for="general_knowledge">
+          General Knowledge
+        </label>
+      </li>
+    </ul>
+    <h1>Pick Difficulty</h1>
+    <ul class="pick-quiz">
+      <li>
+        <input type="radio" id="easy" name="difficulty" value="easy" />
+        <label for="easy">Easy</label>
+      </li>
+      <li>
+        <input type="radio" id="medium" name="difficulty" value="medium" />
+        <label for="medium">Medium</label>
+      </li>
+      <li>
+        <input type="radio" id="hard" name="difficulty" value="hard" />
+        <label for="hard">Hard</label>
+      </li>
+    </ul>
+    <button type="submit" class="btn btn-primary mt-3">Start Quiz!</button>
+  </form>
+</div>
+{%endblock%}

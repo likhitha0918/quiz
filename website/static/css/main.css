@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800;900&display=swap");
+
+:root {
+  --text-color: #63d124;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: #232323;
+}
+
+.nav-link {
+  color: #ffffff !important;
+  position: relative;
+  margin: 0 2rem;
+}
+
+.navbar {
+  background-color: #232323;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: var(--text-color);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in;
+  transform-origin: right;
+}
+.nav-link:hover::after {
+  transform: scalex(1);
+  transform-origin: left;
+}
+
+.btn {
+  background-color: var(--bs-purple);
+}
+
+.btn:hover {
+  background-color: #5e20d1 !important;
+}
+.list-group {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.list-group-item {
+  background-color: #232323;
+  margin: 5px 0;
+  color: var(--text-color);
+}
+
+.custom-container {
+  width: 50%;
+}
+
+.form-control {
+  background-color: #3a3a3a;
+  color: #63d124 !important;
+  border-radius: 10px;
+  height: 3.125rem;
+}
+
+.form-control:focus {
+  background-color: #3a3a3a;
+}
+
+.form-label,
+.page-title {
+  color: #ffffff;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.btn {
+  width: 14.625rem;
+  height: 3.375rem;
+  border-radius: 1rem;
+  align-self: center;
+  background-color: #63d124;
+  font-weight: bold;
+  color: #232323;
+}
+
+.btn:hover {
+  background-color: #92e661 !important;
+  color: #232323;
+}
+
+.mb-3-mg {
+  margin-top: 3.125rem;
+}
+
+.category {
+  font-weight: bold;
+}
+
+.pick-quiz {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.pick-quiz li {
+  margin: 1rem 0;
+  width: 35rem;
+  height: 3rem;
+  position: relative;
+}
+
+.pick-quiz label,
+.pick-quiz input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: #ffffff;
+}
+
+.pick-quiz input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.pick-quiz input[type="radio"]:checked + label,
+.Checked + label {
+  background: #63d124;
+}
+
+.pick-quiz label {
+  padding: 0.9rem;
+  border: 1px solid rgb(0, 0, 0);
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 1rem;
+}
+
+@media screen and (max-width: 736px) {
+  .pick-quiz li {
+    width: 25rem;
+  }
+}

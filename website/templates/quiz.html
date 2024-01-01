@@ -1,0 +1,68 @@
+{% extends 'base.html' %} {% block title %}Quiz{% endblock %} {%block body%}
+
+<div class="container">
+  <form
+    method="POST"
+    action="/score"
+    class="form-container text-center justify-content-center"
+  >
+    {% for question in questions %}
+    <h1>{{question.question}}</h1>
+    <ul class="pick-quiz text-center">
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="{{question.id}}"
+          id="{{question.id}}1"
+          value="{{question.option_1}}"
+          required
+        />
+        <label class="form-check-label" for="{{question.id}}1">
+          {{question.option_1}}
+        </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="{{question.id}}"
+          id="{{question.id}}2"
+          value="{{question.option_2}}"
+        />
+        <label class="form-check-label" for="{{question.id}}2">
+          {{question.option_2}}
+        </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="{{question.id}}"
+          id="{{question.id}}3"
+          value="{{question.option_3}}"
+        />
+        <label class="form-check-label" for="{{question.id}}3">
+          {{question.option_3}}
+        </label>
+      </li>
+      <li>
+        <input
+          class="form-check-input"
+          type="radio"
+          name="{{question.id}}"
+          id="{{question.id}}4"
+          value="{{question.option_4}}"
+        />
+        <label class="form-check-label" for="{{question.id}}4">
+          {{question.option_4}}
+        </label>
+      </li>
+    </ul>
+
+    {% endfor %}
+    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+</div>
+
+{%endblock%}

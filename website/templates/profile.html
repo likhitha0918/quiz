@@ -1,0 +1,51 @@
+{%extends 'base.html'%} {%block title%} Profile Page {% endblock %} {% block
+body%}
+<div class="container text-center mt-5 custom-container">
+  <h1 class="page-title">Welcome {{user.user_name}}!</h1>
+  <h2 class="page-title">Scores</h2>
+  {% for scores in user.scores %}
+  <table class="table table-dark table-striped mt-5" id="scores">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Easy</th>
+        <th scope="col">Medium</th>
+        <th scope="col">Hard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="category" scope="row">Science Computers</td>
+        <td>{{scores.science_computers}}</td>
+        <td>{{scores.science_computers_medium}}</td>
+        <td>{{scores.science_computers_hard}}</td>
+      </tr>
+      <tr>
+        <td class="category" scope="row">Mythology</td>
+        <td>{{scores.mythology}}</td>
+        <td>{{scores.mythology_medium}}</td>
+        <td>{{scores.mythology_hard}}</td>
+      </tr>
+      <tr>
+        <td class="category" scope="row">Sports</td>
+        <td>{{scores.sports}}</td>
+        <td>{{scores.sports_medium}}</td>
+        <td>{{scores.sports_hard}}</td>
+      </tr>
+      <tr>
+        <td class="category" scope="row">Vehicles</td>
+        <td>{{scores.vehicles}}</td>
+        <td>{{scores.vehicles_medium}}</td>
+        <td>{{scores.vehicles_hard}}</td>
+      </tr>
+      <tr>
+        <td class="category" scope="row">General Knowledge</td>
+        <td>{{scores.general_knowledge}}</td>
+        <td>{{scores.general_knowledge_medium}}</td>
+        <td>{{scores.general_knowledge_hard}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endfor%}
+</div>
+{% endblock %}
