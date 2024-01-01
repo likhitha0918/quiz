@@ -69,9 +69,7 @@ pypng
 PyQRCode
 pytesseract
 python-dateutil
-pyttsx3
-pytz
-pywin32
+
 PyYAML
 pyzmq
 qrcode
